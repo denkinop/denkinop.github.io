@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="zh-cmn-Hans">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<meta name="description" content="主页">
+	<meta name="keywords" content="主页">
+
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+	<link href="css/metro-all.css?ver=@@b-version" rel="stylesheet">
+	<link href="tiles/start.css" rel="stylesheet">
+	<link href="desktop/descktop.css" rel="stylesheet">
+
+	<title>Start - inn.moe</title>
+
+	<style>
+		#charm {
+			height: calc(100vh - 40px);
+			width: 396px;
+			background-color: #1F4F5D;
+		}
+	</style>
+</head>
+
+<body class="bg-dark fg-white h-vh-100 m4-cloak">
+	<div data-role="charms" data-position="right" id="charm" class="p-4">
+		<div class="h-100 d-flex flex-column">
+			<div class="charm-top">
+
+				<div class="text-center m-4">
+					<span>通知</span>
+				</div>
+
+				<div class="charm-notify">
+					<span class="icon mif-info"></span>
+					<div class="title">UA</div>
+					<div class="content">
+						<td>
+							<script language="JavaScript"
+								type="text/javascript">document.write(navigator.userAgent);</script>
+						</td>
+					</div>
+				</div>
+
+				<div class="charm-notify">
+					<span class="icon mif-info"></span>
+					<div class="title">IP</div>
+					<div class="content">
+						<td>
+							<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+							<script type="text/javascript">document.write(returnCitySN["cip"])</script>
+							<br>
+							<script type="text/javascript">document.write(returnCitySN["cname"])</script>
+						</td>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="desktop">
+		<div class="window-area">
+			<div class="container-fluid start-screen h-100">
+				<h1 class="start-screen-title">开始</h1>
+				<div class="tiles-area clear">
+					<div class="tiles-grid tiles-group size-2 fg-white" data-group-title="General">
+
+						<a href="https://blog.inn.moe" data-role="tile" class="bg-indigo fg-white">
+							<span class="mif-ie icon"></span>
+							<span class="branding-bar">Blog</span>
+						</a>
+
+						<a href="https://mail.inn.moe" data-role="tile" class="bg-blue fg-white">
+							<span class="mif-mail icon"></span>
+							<span class="branding-bar">Email</span>
+						</a>
+
+						<a href="https://onedrive.live.com" data-role="tile" class="bg-teal fg-white">
+							<span class="mif-onedrive icon"></span>
+							<span class="branding-bar">云盘</span>
+						</a>
+
+						<a onmouseup="createWindowCalendar()" data-role="tile" class="bg-taupe fg-white">
+							<span class="mif-table icon"></span>
+							<span class="branding-bar">日历</span>
+						</a>
+
+						<div data-role="tile" data-size="wide" class="bg-red fg-white">
+							<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=310 height=110
+								src="https://music.163.com/outchain/player?type=0&id=7092330722&auto=0&height=90"></iframe>
+							<span class="branding-bar">网易云音乐</span>
+						</div>
+
+					</div>
+
+					<div class="tiles-grid tiles-group size-1 fg-white" data-group-title="Office">
+
+						<a href="https://outlook.live.com/" data-role="tile" data-size="small">
+							<img src="img/outlook.png" class="icon">
+						</a>
+
+						<a href="https://office.live.com/start/Word.aspx" data-role="tile" data-size="small"
+							class="bg-lightCobalt">
+							<img src="img/word.png" class="icon">
+						</a>
+
+						<a href="https://office.live.com/start/Excel.aspx" data-role="tile" data-size="small"
+							class="bg-emerald">
+							<img src="img/excel.png" class="icon">
+						</a>
+
+						<a href="https://office.live.com/start/PowerPoint.aspx" data-role="tile" data-size="small"
+							class="bg-red">
+							<img src="img/powerpoint.png" class="icon">
+						</a>
+
+						<a href="https://www.onenote.com" data-role="tile" data-size="small" class="bg-violet">
+							<img src="img/onenote.png" class="icon">
+						</a>
+
+					</div>
+
+					<div class="tiles-grid tiles-group size-2 fg-white" data-group-title="Social">
+
+						<a data-role="tile" data-size="wide" class="bg-steel fg-white">
+							<iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tr&skin=durian"
+								frameborder="0" width="310" height="200" allowtransparency="true"></iframe>
+						</a>
+
+						<a href="https://twitter.com/" data-role="tile">
+							<span class="mif-twitter icon"></span>
+							<span class="branding-bar">Twitter</span>
+						</a>
+
+						<a href="https://store.steampowered.com/" data-role="tile" class="bg-grayBlue fg-white">
+							<span class="mif-steam icon"></span>
+							<span class="branding-bar">Steam</span>
+						</a>
+
+						<a href="https://weibo.com/" data-size="small" data-role="tile" class="bg-crimson fg-white">
+							<img src="img/weibo.ico" class="icon">
+						</a>
+
+						<a href="https://tieba.baidu.com/" data-size="small" data-role="tile"
+							class="bg-darkCyan fg-white">
+							<img src="img/baidu.ico" class="icon">
+						</a>
+
+					</div>
+
+					<div class="tiles-grid tiles-group size-2 fg-white" data-group-title="Games">
+
+						<a href="https://jp.finalfantasyxiv.com/lodestone/character/23726104/" data-role="tile"
+							class="bg-brown">
+							<img src="img/ff.ico" class="icon">
+							<span class="branding-bar">Final Fantasy XIV</span>
+						</a>
+
+						<a href="https://alchemystars.jp/" data-role="tile" class="bg-grayBlue">
+							<img src="img/alstars.ico" class="icon">
+							<span class="branding-bar">白夜極光</span>
+						</a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="task-bar">
+			<div class="task-bar-section">
+				<a href="https://github.com/denkinop/denkinop.github.io/" class="task-bar-item"
+					id="start-menu-toggle"><span class="mif-github"></span></a>
+			</div>
+
+			<div class="task-bar-section system-tray ml-auto">
+				<span style="line-height: 40px;" class="pr-4">
+					<span data-role="clock" class="w-auto fg-white reduce-1" data-show-date="false"></span>
+				</span>
+				<button class="task-bar-item" id="open-charm" onclick="openCharm()"><span
+						class="mif-comment"></span></button>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/metro.js"></script>
+	<script src="tiles/start.js"></script>
+	<script src="desktop/desktop.js"></script>
+
+</body>
+
+</html>
