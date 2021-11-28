@@ -24,7 +24,6 @@ var Desktop = {
     },
 
     removeFromTaskBar: function(wnd){
-        console.log(wnd);
         var wID = wnd.attr("id");
         var items = $(".task-bar-item");
         var that = this;
@@ -41,8 +40,10 @@ var Desktop = {
         o.onDragStart = function(){
             win = $(this);
             $(".window").css("z-index", 1);
-            if (!win.hasClass("modal"))
+
+            if (!win.hasClass("modal")) {
                 win.css("z-index", 3);
+            }
         };
         o.onDragStop = function(){
             win = $(this);
@@ -82,7 +83,7 @@ var w_titles = [
 ];
 
 function createWindow(){
-    var index = Metro.utils.random(0, 3);
+    var index = $.random(0, 3);
     var w = Desktop.createWindow({
         resizeable: true,
         draggable: true,
@@ -93,13 +94,12 @@ function createWindow(){
     });
 
     setTimeout(function(){
-        console.log(w);
-        //w.setContent("New window content");
+        w.setContent("New window content");
     }, 3000);
 }
 
 function createWindowWithCustomButtons(){
-    var index = Metro.utils.random(0, 3);
+    var index = $.random(0, 3);
     var customButtons = [
         {
             html: "<span class='mif-rocket'></span>",
@@ -141,13 +141,15 @@ function createWindowModal(){
         modal: true,
         place: "center",
         onShow: function(win){
-            $(win).addClass("ani-swoopInTop");
+            win = $(win);
+            win.addClass("ani-swoopInTop");
             setTimeout(function(){
                 $(win).removeClass("ani-swoopInTop");
             }, 1000);
         },
         onClose: function(win){
-            $(win).addClass("ani-swoopOutTop");
+            win = $(win);
+            win.addClass("ani-swoopOutTop");
         }
     });
 }
@@ -159,7 +161,7 @@ function createWindowYoutube(){
         width: 500,
         icon: "<span class='mif-youtube'></span>",
         title: "Youtube video",
-        content: "https://youtu.be/ZlhUJ6QkvL8",
+        content: "https://youtu.be/Qz6XNSB0F3E",
         clsContent: "bg-dark"
     });
 }
