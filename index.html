@@ -27,6 +27,21 @@
 	</style>
 </head>
 
+<script>
+WIDGET = {
+  "CONFIG": {
+    "layout": "1",
+    "width": "310",
+    "height": "150",
+    "background": "1",
+    "dataColor": "FFFFFF",
+    "modules": "01",
+    "key": "05e3164dd9334748bf612fa7a5ec03bd"
+  }
+}
+</script>
+<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
+
 <body class="bg-dark fg-white h-vh-100 m4-cloak">
 	<div data-role="charms" data-position="right" id="charm" class="p-4">
 		<div class="h-100 d-flex flex-column">
@@ -129,8 +144,7 @@
 					<div class="tiles-grid tiles-group size-2 fg-white" data-group-title="Social">
 
 						<a data-role="tile" data-size="wide" class="bg-steel fg-white">
-							<iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tl&skin=sogou&color=FFFFFF"
-								frameborder="0" width="310" height="150" allowtransparency="true"></iframe>
+							<div id="he-plugin-standard"></div>
 						</a>
 
 						<a href="https://twitter.com/" data-role="tile">
