@@ -1,0 +1,179 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>FFXIV TITLE</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <style media="screen">
+        .rtbox .listUl {
+            width: 226px;
+            margin-top: 7px;
+        }
+        
+        .rtbox .listUl li {
+            border-bottom: 1px dashed #3f3f42;
+            width: 214px;
+        }
+        
+        .rtbox .listTop a {
+            color: #3f3f42;
+        }
+        
+        .rtbox .listTop a:hover {
+            color: #3f3f42;
+        }
+        
+        .lfbox .smLunbo .lunsrol li.on {
+            background: #eeedf3;
+        }
+        
+        .rtbox .listUl a {
+            display: block;
+            width: 214px;
+            height: 40px;
+            overflow: hidden;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="lunch">
+        <div class="lfbox">
+            <div class="smLunbo">
+                <ul class="lundiv" id="lundiv"></ul>
+                <ul class="lunsrol" id="lunsrol"></ul>
+            </div>
+        </div>
+        <div class="rtbox">
+            <div class="list">
+                <div class="listTop" id="listTop">
+
+                </div>
+                <ul class="listUl" id="boxscroll">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="https://ff.web.sdo.com/project/launcher0904/js/jquery-1.11.1.min.js"></script>
+<script src="https://ff.web.sdo.com/project/launcher0904/js/jquery.nicescroll.js"></script>
+<script type="text/javascript">
+    function loadData(_url, data, fn) {
+        var url = _url + "?" + data + "&callback=" + fn;
+        var t = document.createElement("script")
+        t.src = url, t.type = "text/javascript", t.async = !0
+        document.getElementsByTagName("head")[0].appendChild(t);
+        t.onload = function() {
+            document.getElementsByTagName("head")[0].removeChild(t);
+        }
+    }
+
+    loadData('https://ff.web.sdo.com/inc/newdata.ashx?url=List', 'gameCode=ff&category=5203&pageIndex=0&pageSize=6', 'lundivFun');
+
+    function lundivFun(data) {
+        if (data.Code == 0 && data.RecordCount > 0) {
+            var html = '';
+            for (var i = 0; i < data.RecordCount; i++) {
+                if (i == 0) {
+                    html += '<li class="dis">';
+                } else {
+                    html += '<li class="">';
+                }
+                if (data.Data[i].OutLink) {
+                    html += '<a href="' + data.Data[i].OutLink + '" target="_blank"><img src="' + data.Data[i].HomeImagePath + '"></a></li>';
+                } else {
+                    html += '<a href="https://ff.web.sdo.com/web7/news/news.html?id=' + ret[i].Id + '" target="_blank"><img src="' + data.Data[i].HomeImagePath + '"></a></li>';
+                }
+            }
+            $("#lundiv").html(html);
+            smLunbo();
+        }
+    }
+
+    function smLunbo() {
+        var len = $("#lundiv li").length;
+        var index = 1;
+        var int;
+
+        for (i = 0; i < len; i++) {
+            $("<li></li>").appendTo("#lunsrol");
+        }
+        $("#lunsrol li:first").addClass("on");
+
+        function showSys(num) {
+            $("#lunsrol li").removeClass().eq(num).addClass("on").siblings().removeClass("on");
+            $("#lundiv li").removeClass().eq(num).fadeIn().siblings().fadeOut();
+        }
+
+        function ziDong() {
+            if (index == len) {
+                index = 0;
+            }
+            showSys(index);
+            index = index + 1;
+            int = setTimeout(ziDong, 3000);
+        }
+        int = setTimeout(ziDong, 3000);
+
+        $("#lunsrol li").hover(function() {
+            clearTimeout(int);
+            index = $(this).index();
+            if (index == len) {
+                index = 0;
+            }
+            showSys(index);
+            index = index + 1;
+        });
+        $("#lundiv").hover(function() {
+            clearTimeout(int);
+
+        }, function() {
+            int = setTimeout(ziDong, 1500);
+        });
+    }
+
+    loadData('https://ff.web.sdo.com/inc/newdata.ashx?url=List', 'gameCode=ff&category=5310,5311,5312,5313,5316&pageIndex=0&pageSize=12', 'boxscrollFun');
+
+    function boxscrollFun(data) {
+        if (data.Code == 0) {
+            if (data.Data) {
+                var topHtml = '';
+                var listHtml = '';
+                var ret = data.Data;
+                for (var i = 0; i < ret.length; i++) {
+                    if (ret[i].Summary == '333') {
+                        continue;
+                    }
+                    if (i == 0) {
+                        topHtml += '<div class="time">' + ret[i].PublishDate.split(' ')[0] + '</div>';
+                        if (ret[i].OutLink) {
+                            topHtml += '<a target="_blank" href="' + ret[i].OutLink + '">';
+                        } else {
+                            topHtml += '<a target="_blank" href="https://ff.web.sdo.com/web7/news/news.html?id=' + ret[i].Id + '">';
+                        }
+                        topHtml += '<div class="tit">' + ret[i].Title + '</div>';
+                        topHtml += '</a>';
+                        topHtml += '<div class="line"></div>';
+                    } else {
+                        listHtml += '<li>';
+                        if (ret[i].OutLink) {
+                            listHtml += '<a target="_blank" href="' + ret[i].OutLink + '">' + ret[i].Title + '</a>';
+                        } else {
+                            listHtml += '<a target="_blank" href="https://ff.web.sdo.com/web7/news/news.html?id=' + ret[i].Id + '">' + ret[i].Title + '</a>';
+                        }
+                        listHtml += '</li>';
+                    }
+                }
+                $('#listTop').html(topHtml);
+                $('#boxscroll').html(listHtml);
+            }
+        }
+    }
+</script>
+
+</html>

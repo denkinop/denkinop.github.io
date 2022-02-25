@@ -1,0 +1,218 @@
+@charset "UTF-8";
+*,
+ol,
+ul {
+    margin: 0;
+    padding: 0
+}
+
+.fl,
+.fr {
+    display: inline
+}
+
+img {
+    -ms-interpolation-mode: bicubic
+}
+
+body {
+    overflow-x: hidden;
+    font-family: '微软雅黑'
+}
+
+a {
+    outline: 0;
+    text-decoration: none
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.lunch {
+    overflow: hidden;
+    zoom: 1;
+    width: 800px;
+    height: 295px;
+    background: #eeedf3;
+}
+
+.lfbox {
+    position: relative;
+    width: 547px;
+    height: 293px;
+    border: 1px solid #000;
+    margin-right: 11px;
+    float: left;
+    background: #000
+}
+
+.lfbox .smLunbo,
+.lfbox .smLunbo .lundiv {
+    width: 547px;
+    height: 293px;
+    overflow: hidden;
+    position: relative
+}
+
+.lfbox .smLunbo .lundiv li {
+    width: 547px;
+    height: 293px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none
+}
+
+.lfbox .smLunbo .lundiv li a {
+    display: block;
+    width: 547px;
+    height: 293px;
+    overflow: hidden
+}
+
+.lfbox .smLunbo .lundiv li img {
+    width: 547px;
+    height: 293px;
+    display: block;
+    border: 0
+}
+
+.lfbox .smLunbo .lundiv li.dis {
+    display: block
+}
+
+.lfbox .smLunbo .lunsrol {
+    height: 10px;
+    position: absolute;
+    overflow: hidden;
+    right: 15px;
+    bottom: 8px
+}
+
+.lfbox .smLunbo .lunsrol li {
+    float: left;
+    margin-left: 8px;
+    width: 10px;
+    height: 10px;
+    background: #000;
+    cursor: pointer;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -ms-border-radius: 50%
+}
+
+.lfbox .smLunbo .lunsrol li.on {
+    background: #c90001;
+    width: 20px;
+    height: 10px;
+    -ms-border-top-left-radius: 2em;
+    -ms-border-top-right-radius: 2em;
+    -ms-border-bottom-right-radius: 2em;
+    -ms-border-bottom-left-radius: 2em;
+    border-radius: 2em;
+    -webkit-border-radius: 2em
+}
+
+.rtbox {
+    width: 234px;
+    height: 285px;
+    float: left;
+    padding-left: 6px;
+    padding-top: 10px;
+    position: relative;
+}
+
+.rtbox .listTop {
+    padding-right: 12px
+}
+
+.rtbox .listTop a {
+    display: block;
+    cursor: pointer;
+    color: #c90001
+}
+
+.rtbox .listTop a:hover {
+    color: #f00a0c
+}
+
+.rtbox .listTop .time {
+    color: #3f3f42;
+    font-size: 12px;
+    padding-bottom: 2px
+}
+
+.rtbox .listTop .tit {
+    font-size: 18px;
+    font-weight: 700;
+    height: 50px;
+    overflow: hidden;
+    cursor: pointer
+}
+
+.rtbox .listTop .line {
+    width: 40px;
+    height: 1px;
+    background: #3f3f42;
+    margin-top: 5px
+}
+
+.rtbox .listUl {
+    padding-right: 0;
+    margin-top: 10px;
+    height: 195px;
+    overflow: hidden;
+    position: relative;
+    width: 230px
+}
+
+.rtbox .listUl li {
+    font-size: 14px;
+    padding: 5px 0 5px 12px;
+    height: 40px;
+}
+
+.rtbox .listUl li.act a {
+    color: #fff
+}
+
+.rtbox .listUl a {
+    color: #3f3f42
+}
+
+.rtbox .listUl a:hover {
+    color: #3f3f42;
+    text-decoration: underline
+}
+
+.rtbox .listUl {
+    width: 226px;
+    margin-top: 7px;
+}
+
+.rtbox .listUl li {
+    border-bottom: 1px dashed #c6c6c6;
+}
+
+.rtbox .listTop a {
+    color: #ededed;
+}
+
+.rtbox .listTop a:hover {
+    color: #ffffff;
+}
+
+.lfbox .smLunbo .lunsrol li.on {
+    background: #312c69;
+}
