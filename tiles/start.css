@@ -3,7 +3,7 @@
   height: 100%;
   position: relative;
   padding-bottom: 20px;
-  background: url("https://innmoe.vicp.fun/img/hp/background.webp") center center no-repeat;
+  background: url("https://cdn.jsdelivr.net/gh/innmoe/repo/img/background.webp") center center no-repeat;
   background-size: cover;
 }
 .start-screen-title {
