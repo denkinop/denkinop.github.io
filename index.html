@@ -1,162 +1,152 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="主页">
-    <meta name="keywords" content="主页">
-    <link rel="shortcut icon" href="https://innmoe.vicp.fun/static/home/img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="https://innmoe.vicp.fun/static/home/img/favicon.ico" type="image/x-icon">
-    <link href="https://innmoe.vicp.fun/static/home/css/metro-all.css" rel="stylesheet">
-    <link href="https://innmoe.vicp.fun/static/home/tiles/start.css" rel="stylesheet">
-    <link href="https://innmoe.vicp.fun/static/home/desktop/descktop.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="主页" />
+    <meta name="keywords" content="主页" />
+    <link rel="shortcut icon" href="https://innmoe.vicp.fun/static/home/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="https://innmoe.vicp.fun/static/home/img/favicon.ico" type="image/x-icon" />
+    <link href="https://innmoe.vicp.fun/static/home/css/metro-all.css" rel="stylesheet" />
+    <link href="https://innmoe.vicp.fun/static/home/tiles/start.css" rel="stylesheet" />
+    <link href="https://innmoe.vicp.fun/static/home/desktop/descktop.css" rel="stylesheet" />
     <title>主页 - inn.moe</title>
     <style>
-        #charm {
-            height: calc(100vh - 40px);
-            width: 396px;
-            background-color: #1F4F5D;
-        }
+      #charm {
+        height: calc(100vh - 40px);
+        width: 396px;
+        background-color: #1f4f5d;
+      }
     </style>
-</head>
+  </head>
 
-<script>
+  <script>
     WIDGET = {
-        "CONFIG": {
-            "layout": "1",
-            "width": "310",
-            "height": "150",
-            "background": "1",
-            "dataColor": "FFFFFF",
-            "modules": "01",
-            "key": "05e3164dd9334748bf612fa7a5ec03bd"
-        }
-    }
-</script>
-<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
+      CONFIG: {
+        layout: '1',
+        width: '310',
+        height: '150',
+        background: '1',
+        dataColor: 'FFFFFF',
+        modules: '01',
+        key: '05e3164dd9334748bf612fa7a5ec03bd'
+      }
+    };
+  </script>
+  <script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
 
-<body class="bg-dark fg-white h-vh-100 m4-cloak">
+  <body class="bg-dark fg-white h-vh-100 m4-cloak">
     <div data-role="charms" data-position="right" id="charm" class="p-4">
-        <div class="h-100 d-flex flex-column">
-            <div class="charm-top">
-                <div class="text-center m-4">
-                    <span>通知</span>
-                </div>
-                <div class="charm-notify">
-                    <span class="icon mif-info"></span>
-                    <div class="title">User-Agent</div>
-                    <div class="content">
-                        <td>
-                            <script language="JavaScript"
-                                type="text/javascript">document.write(navigator.userAgent);</script>
-                        </td>
-                    </div>
-                </div>
+      <div class="h-100 d-flex flex-column">
+        <div class="charm-top">
+          <div class="text-center m-4">
+            <span>通知</span>
+          </div>
+          <div class="charm-notify">
+            <span class="icon mif-info"></span>
+            <div class="title">User-Agent</div>
+            <div class="content">
+              <td>
+                <script language="JavaScript" type="text/javascript">
+                  document.write(navigator.userAgent);
+                </script>
+              </td>
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="desktop">
-        <div class="window-area">
-            <div class="container-fluid start-screen h-100" style="overflow-y:auto;overflow-x:hidden">
-                <h1 class="start-screen-title">开始</h1>
-                <div class="tiles-area clear">
-                    <div class="tiles-grid tiles-group size-2 fg-white" data-group-title="General">
-                        <a href="https://blog.inn.moe" data-role="tile" class="bg-indigo fg-white">
-                            <span class="mif-ie icon"></span>
-                            <span class="branding-bar">Blog</span>
-                        </a>
-                        <a href="https://mail.inn.moe" data-role="tile" class="bg-blue fg-white">
-                            <span class="mif-mail icon"></span>
-                            <span class="branding-bar">Email</span>
-                        </a>
-                        <a onmouseup="createWindowCalendar()" data-role="tile" class="bg-taupe fg-white">
-                            <span class="mif-table icon"></span>
-                            <span class="branding-bar">日历</span>
-                        </a>
-                        <a href="https://innmoe.vicp.fun" data-role="tile" class="bg-teal fg-white">
-                            <span class="mif-cabinet icon"></span>
-                            <span class="branding-bar">文件库</span>
-                        </a>
-                        <div data-role="tile" data-size="wide" class="bg-red fg-white">
-                            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=310 height=110
-                                src="https://music.163.com/outchain/player?type=0&id=8039587836&auto=0&height=90"></iframe>
-                            <span class="branding-bar">网易云音乐</span>
-                        </div>
-                    </div>
-
-                    <div class="tiles-grid tiles-group size-1 fg-white" data-group-title="Office">
-                        <a href="https://outlook.live.com/" data-role="tile" data-size="small">
-                            <img src="https://innmoe.vicp.fun/static/home/img/outlook.png" class="icon">
-                        </a>
-                        <a href="https://www.office.com/launch/word" data-role="tile" data-size="small"
-                            class="bg-lightCobalt">
-                            <img src="https://innmoe.vicp.fun/static/home/img/word.png" class="icon">
-                        </a>
-                        <a href="https://www.office.com/launch/excel" data-role="tile" data-size="small"
-                            class="bg-emerald">
-                            <img src="https://innmoe.vicp.fun/static/home/img/excel.png" class="icon">
-                        </a>
-                        <a href="https://www.office.com/launch/powerpoint" data-role="tile" data-size="small"
-                            class="bg-red">
-                            <img src="https://innmoe.vicp.fun/static/home/img/powerpoint.png" class="icon">
-                        </a>
-                        <a href="https://www.onenote.com" data-role="tile" data-size="small" class="bg-violet">
-                            <img src="https://innmoe.vicp.fun/static/home/img/onenote.png" class="icon">
-                        </a>
-                        <a href="https://onedrive.live.com" data-role="tile" data-size="small" class="bg-blue fg-white">
-                            <span class="mif-onedrive icon"></span>
-                        </a>
-                    </div>
-
-                    <div class="tiles-grid tiles-group size-2 fg-white" data-group-title="Social">
-                        <a data-role="tile" data-size="wide" class="bg-steel fg-white">
-                            <div id="he-plugin-standard"></div>
-                        </a>
-                        <a href="https://discord.gg/KrRdmCkyyd" data-role="tile" class="bg-lightCobalt">
-                            <img src="https://innmoe.vicp.fun/static/home/img/discord.ico" class="icon">
-                            <span class="branding-bar">Discord</span>
-                        </a>
-                        <a href="https://steamcommunity.com/id/Flameu_Nop/" data-role="tile"
-                            class="bg-grayBlue fg-white">
-                            <span class="mif-steam icon"></span>
-                            <span class="branding-bar">Steam</span>
-                        </a>
-                    </div>
-
-                    <div class="tiles-grid tiles-group size-2 fg-white" data-group-title="Games">
-                        <a href="https://jp.finalfantasyxiv.com/lodestone/character/23726104/" data-role="tile"
-                            class="bg-brown">
-                            <img src="https://innmoe.vicp.fun/static/home/img/ff.ico" class="icon">
-                            <span class="branding-bar">Final Fantasy XIV</span>
-                        </a>
-                    </div>
-                </div>
+      <div class="window-area">
+        <div class="container-fluid start-screen h-100" style="overflow-y: auto; overflow-x: hidden">
+          <h1 class="start-screen-title">开始</h1>
+          <div class="tiles-area clear">
+            <div class="tiles-grid tiles-group size-2 fg-white" data-group-title="General">
+              <a href="https://blog.inn.moe" data-role="tile" class="bg-indigo fg-white">
+                <span class="mif-ie icon"></span>
+                <span class="branding-bar">Blog</span>
+              </a>
+              <a href="https://mail.inn.moe" data-role="tile" class="bg-blue fg-white">
+                <span class="mif-mail icon"></span>
+                <span class="branding-bar">Email</span>
+              </a>
+              <a onmouseup="createWindowCalendar()" data-role="tile" class="bg-taupe fg-white">
+                <span class="mif-table icon"></span>
+                <span class="branding-bar">日历</span>
+              </a>
+              <a href="https://innmoe.vicp.fun" data-role="tile" class="bg-teal fg-white">
+                <span class="mif-cabinet icon"></span>
+                <span class="branding-bar">文件库</span>
+              </a>
+              <div data-role="tile" data-size="wide" class="bg-red fg-white">
+                <iframe frameborder="no" marginwidth="0" marginheight="0" width="310" height="110" src="https://music.163.com/outchain/player?type=0&id=8039587836&auto=0&height=90"></iframe>
+                <span class="branding-bar">网易云音乐</span>
+              </div>
             </div>
+
+            <div class="tiles-grid tiles-group size-1 fg-white" data-group-title="Office">
+              <a href="https://outlook.live.com/" data-role="tile" data-size="small">
+                <img src="https://innmoe.vicp.fun/static/home/img/outlook.png" class="icon" />
+              </a>
+              <a href="https://www.office.com/launch/word" data-role="tile" data-size="small" class="bg-lightCobalt">
+                <img src="https://innmoe.vicp.fun/static/home/img/word.png" class="icon" />
+              </a>
+              <a href="https://www.office.com/launch/excel" data-role="tile" data-size="small" class="bg-emerald">
+                <img src="https://innmoe.vicp.fun/static/home/img/excel.png" class="icon" />
+              </a>
+              <a href="https://www.office.com/launch/powerpoint" data-role="tile" data-size="small" class="bg-red">
+                <img src="https://innmoe.vicp.fun/static/home/img/powerpoint.png" class="icon" />
+              </a>
+              <a href="https://www.onenote.com" data-role="tile" data-size="small" class="bg-violet">
+                <img src="https://innmoe.vicp.fun/static/home/img/onenote.png" class="icon" />
+              </a>
+              <a href="https://onedrive.live.com" data-role="tile" data-size="small" class="bg-blue fg-white">
+                <span class="mif-onedrive icon"></span>
+              </a>
+            </div>
+
+            <div class="tiles-grid tiles-group size-2 fg-white" data-group-title="Social">
+              <a data-role="tile" data-size="wide" class="bg-steel fg-white">
+                <div id="he-plugin-standard"></div>
+              </a>
+              <a href="https://discord.gg/KrRdmCkyyd" data-role="tile" class="bg-lightCobalt">
+                <img src="https://innmoe.vicp.fun/static/home/img/discord.ico" class="icon" />
+                <span class="branding-bar">Discord</span>
+              </a>
+              <a href="https://steamcommunity.com/id/Flameu_Nop/" data-role="tile" class="bg-grayBlue fg-white">
+                <span class="mif-steam icon"></span>
+                <span class="branding-bar">Steam</span>
+              </a>
+            </div>
+
+            <div class="tiles-grid tiles-group size-2 fg-white" data-group-title="Games">
+              <a href="https://jp.finalfantasyxiv.com/lodestone/character/23726104/" data-role="tile" class="bg-brown">
+                <img src="https://innmoe.vicp.fun/static/home/img/ff.ico" class="icon" />
+                <span class="branding-bar">Final Fantasy XIV</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="task-bar">
+        <div class="task-bar-section">
+          <a href="mailto:i@inn.moe" class="task-bar-item" id="start-menu-toggle"><span class="mif-contacts-dialer"></span></a>
         </div>
 
-        <div class="task-bar">
-            <div class="task-bar-section">
-                <a href="mailto:i@inn.moe" class="task-bar-item" id="start-menu-toggle"><span
-                        class="mif-contacts-dialer"></span></a>
-            </div>
-
-            <div class="task-bar-section system-tray ml-auto">
-                <span style="line-height: 40px;" class="pr-4">
-                    <span data-role="clock" class="w-auto fg-white reduce-1" data-show-date="false"></span>
-                </span>
-                <button class="task-bar-item" id="open-charm" onclick="openCharm()"><span
-                        class="mif-comment"></span></button>
-            </div>
+        <div class="task-bar-section system-tray ml-auto">
+          <span style="line-height: 40px" class="pr-4">
+            <span data-role="clock" class="w-auto fg-white reduce-1" data-show-date="false"></span>
+          </span>
+          <button class="task-bar-item" id="open-charm" onclick="openCharm()"><span class="mif-comment"></span></button>
         </div>
+      </div>
     </div>
 
     <script src="https://innmoe.vicp.fun/static/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://innmoe.vicp.fun/static/home/js/metro.js"></script>
     <script src="https://innmoe.vicp.fun/static/home/tiles/start.js"></script>
     <script src="https://innmoe.vicp.fun/static/home/desktop/desktop.js"></script>
-
-</body>
-
+  </body>
 </html>
