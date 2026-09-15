@@ -2,14 +2,19 @@
 <html lang="zh-cmn-Hans">
   <head>
     <meta charset="UTF-8" />
+    <base href="https://innmoe.vicp.fun/resource/" />
+    <link rel="preconnect" href="https://innmoe.vicp.fun" />
+    <link rel="dns-prefetch" href="https://innmoe.vicp.fun" />
+    <link rel="preconnect" href="https://music.163.com" />
+    <link rel="dns-prefetch" href="https://music.163.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="主页" />
     <meta name="keywords" content="主页" />
-    <link rel="shortcut icon" href="https://innmoe.vicp.fun/resource/home/img/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="https://innmoe.vicp.fun/resource/home/img/favicon.ico" type="image/x-icon" />
-    <link href="https://innmoe.vicp.fun/resource/home/css/metro-all.css" rel="stylesheet" />
-    <link href="https://innmoe.vicp.fun/resource/home/tiles/start.css" rel="stylesheet" />
-    <link href="https://innmoe.vicp.fun/resource/home/desktop/descktop.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="home/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="home/img/favicon.ico" type="image/x-icon" />
+    <link href="home/css/metro-all.css" rel="stylesheet" />
+    <link href="home/tiles/start.css" rel="stylesheet" />
+    <link href="home/desktop/descktop.css" rel="stylesheet" />
     <title>主页 - inn.moe</title>
     <style>
       #charm {
@@ -19,21 +24,6 @@
       }
     </style>
   </head>
-
-  <script>
-    WIDGET = {
-      CONFIG: {
-        layout: '1',
-        width: '310',
-        height: '150',
-        background: '1',
-        dataColor: 'FFFFFF',
-        modules: '01',
-        key: '5b2d2338c6aa4bb596b639018e89853e'
-      }
-    };
-  </script>
-  <script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
 
   <body class="bg-dark fg-white h-vh-100 m4-cloak">
     <div data-role="charms" data-position="right" id="charm" class="p-4">
@@ -80,26 +70,33 @@
                 <span class="branding-bar">文件库</span>
               </a>
               <div data-role="tile" data-size="wide" class="bg-red fg-white">
-                <iframe frameborder="no" marginwidth="0" marginheight="0" width="310" height="110" src="https://music.163.com/outchain/player?type=0&id=8886033113&auto=0&height=90"></iframe>
+                <iframe
+                  title="网易云音乐播放器"
+                  width="310"
+                  height="110"
+                  loading="lazy"
+                  style="border: 0; margin: 0"
+                  src="https://music.163.com/outchain/player?type=0&id=8886033113&auto=0&height=90"
+                ></iframe>
                 <span class="branding-bar">网易云音乐</span>
               </div>
             </div>
 
             <div class="tiles-grid tiles-group size-1 fg-white" data-group-title="Office">
               <a href="https://outlook.live.com/" data-role="tile" data-size="small">
-                <img src="https://innmoe.vicp.fun/resource/home/img/outlook.png" class="icon" />
+                <img src="home/img/outlook.png" class="icon" loading="lazy" decoding="async" />
               </a>
               <a href="https://www.office.com/launch/word" data-role="tile" data-size="small" class="bg-lightCobalt">
-                <img src="https://innmoe.vicp.fun/resource/home/img/word.png" class="icon" />
+                <img src="home/img/word.png" class="icon" loading="lazy" decoding="async" />
               </a>
               <a href="https://www.office.com/launch/excel" data-role="tile" data-size="small" class="bg-emerald">
-                <img src="https://innmoe.vicp.fun/resource/home/img/excel.png" class="icon" />
+                <img src="home/img/excel.png" class="icon" loading="lazy" decoding="async" />
               </a>
               <a href="https://www.office.com/launch/powerpoint" data-role="tile" data-size="small" class="bg-red">
-                <img src="https://innmoe.vicp.fun/resource/home/img/powerpoint.png" class="icon" />
+                <img src="home/img/powerpoint.png" class="icon" loading="lazy" decoding="async" />
               </a>
               <a href="https://www.onenote.com" data-role="tile" data-size="small" class="bg-violet">
-                <img src="https://innmoe.vicp.fun/resource/home/img/onenote.png" class="icon" />
+                <img src="home/img/onenote.png" class="icon" loading="lazy" decoding="async" />
               </a>
               <a href="https://onedrive.live.com" data-role="tile" data-size="small" class="bg-blue fg-white">
                 <span class="mif-onedrive icon"></span>
@@ -107,11 +104,8 @@
             </div>
 
             <div class="tiles-grid tiles-group size-2 fg-white" data-group-title="Social">
-              <a data-role="tile" data-size="wide" class="bg-steel fg-white">
-                <div id="he-plugin-standard"></div>
-              </a>
               <a href="https://discord.gg/KrRdmCkyyd" data-role="tile" class="bg-lightCobalt">
-                <img src="https://innmoe.vicp.fun/resource/home/img/discord.ico" class="icon" />
+                <img src="home/img/discord.ico" class="icon" loading="lazy" decoding="async" />
                 <span class="branding-bar">Discord</span>
               </a>
               <a href="https://steamcommunity.com/id/Flameu_Nop/" data-role="tile" class="bg-grayBlue fg-white">
@@ -122,7 +116,7 @@
 
             <div class="tiles-grid tiles-group size-2 fg-white" data-group-title="Games">
               <a href="https://jp.finalfantasyxiv.com/lodestone/character/23726104/" data-role="tile" class="bg-brown">
-                <img src="https://innmoe.vicp.fun/resource/home/img/ff.ico" class="icon" />
+                <img src="home/img/ff.ico" class="icon" loading="lazy" decoding="async" />
                 <span class="branding-bar">Final Fantasy XIV</span>
               </a>
             </div>
@@ -144,9 +138,9 @@
       </div>
     </div>
 
-    <script src="https://innmoe.vicp.fun/resource/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://innmoe.vicp.fun/resource/home/js/metro.js"></script>
-    <script src="https://innmoe.vicp.fun/resource/home/tiles/start.js"></script>
-    <script src="https://innmoe.vicp.fun/resource/home/desktop/desktop.js"></script>
+    <script src="jquery/3.3.1/jquery.min.js" defer></script>
+    <script src="home/js/metro.js" defer></script>
+    <script src="home/tiles/start.js" defer></script>
+    <script src="home/desktop/desktop.js" defer></script>
   </body>
 </html>
